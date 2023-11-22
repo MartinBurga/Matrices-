@@ -8,16 +8,16 @@ int main(void)
     scanf("%d", &di);
     printf("Inserta la dimension de la matriz en j\n");
     scanf("%d", &dj);
-    int matrix[5][5];
+    int matrix[di][dj];
 
     for (int i = 0; i < di; i++)
     {
         for (int j = 0; j < dj; j++)
         {
-            matrix[di][dj] = 0;
-            if (di == dj)
+            matrix[i][j] = 0;
+            if (i == j)
             {
-                matrix[di][dj] = 1;
+                matrix[i][j] = 1;
             }
         }
     }
@@ -25,7 +25,7 @@ int main(void)
     {
         for (int j = 0; j < dj; j++)
         {
-            printf("%d ", matrix[di][dj]);
+            printf("%d ", matrix[i][j]);
         }
         printf("\n");
     }
